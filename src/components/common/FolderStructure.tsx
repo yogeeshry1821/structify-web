@@ -1,5 +1,5 @@
 import React from 'react';
-import { Folder, File, ChevronRight, ChevronDown, Plus, Trash } from 'lucide-react';
+import { Folder,  ChevronRight, ChevronDown, Plus, Trash } from 'lucide-react';
 import { type FolderNode } from '../../types/folder';
 
 interface FolderStructureProps {
@@ -13,7 +13,7 @@ export function FolderStructure({ structure, onChange, readOnly = false }: Folde
 
   const toggleExpand = () => setExpanded(!expanded);
 
-  const handleAddItem = (type: 'file' | 'folder') => {
+  const handleAddItem = () => {
     if (readOnly || !onChange) return;
     // Implementation for adding items
   };
@@ -39,7 +39,7 @@ export function FolderStructure({ structure, onChange, readOnly = false }: Folde
         {!readOnly && (
           <div className="ml-auto flex items-center space-x-2">
             <button
-              onClick={() => handleAddItem('file')}
+              onClick={() => handleAddItem()}
               className="p-1 hover:bg-gray-100 rounded"
             >
               <Plus className="w-4 h-4 text-gray-500" />

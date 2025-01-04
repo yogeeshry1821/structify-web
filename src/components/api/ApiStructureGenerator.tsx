@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Upload, RefreshCw } from 'lucide-react';
 import { useApiParser } from '../../hooks/useApiParser';
 import { FolderStructure } from '../common/FolderStructure';
 
 export function ApiStructureGenerator() {
-  const [file, setFile] = useState<File | null>(null);
   const { structure, loading, parseApi } = useApiParser();
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
-      setFile(selectedFile);
       await parseApi(selectedFile);
     }
   };
