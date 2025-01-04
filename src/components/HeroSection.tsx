@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-    const navigate = useNavigate(); // useNavigate must be called inside the component
+    const navigate = useNavigate(); 
 
     const handleClick = () => {
         console.log("Get Started clicked");
-        navigate("/onboarding"); // Navigate to the /onboarding route
+        navigate("/onboarding"); 
     };
 
     return (

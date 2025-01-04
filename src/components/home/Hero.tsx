@@ -1,8 +1,13 @@
-import React from 'react';
 import { Code2, Play, ArrowRight, Boxes, Workflow, Zap } from 'lucide-react';
 import { FeatureItem } from './FeatureItem';
-
+import { useNavigate } from 'react-router-dom'
 export function Hero() {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        console.log("Get Started clicked");
+        navigate("/onboarding");
+    };
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
@@ -25,7 +30,7 @@ export function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-12">
-                            <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200">
+                            <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-200" onClick={handleClick}>
                                 Get Started
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </button>
