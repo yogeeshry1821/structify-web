@@ -1,4 +1,3 @@
-import React from 'react';
 import { GitBranch, Download } from 'lucide-react';
 import { Tooltip } from '../Tooltip';
 

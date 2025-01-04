@@ -33,10 +33,10 @@ export async function parseOpenApi(content: string): Promise<FolderNode> {
 
   // Parse paths and create corresponding structure
   if (spec.paths) {
-    for (const [path, methods] of Object.entries(spec.paths)) {
+    for (const [path] of Object.entries(spec.paths)) {
       const routeName = path.split('/')[1];
       if (routeName) {
-        addRouteStructure(structure, routeName, methods);
+        addRouteStructure(structure, routeName);
       }
     }
   }
@@ -44,7 +44,7 @@ export async function parseOpenApi(content: string): Promise<FolderNode> {
   return structure;
 }
 
-function addRouteStructure(structure: FolderNode, routeName: string, methods: any) {
+function addRouteStructure(structure: FolderNode, routeName: string) {
   // Add controller
   const controllersFolder = structure.children?.find(c => c.name === 'controllers');
   if (controllersFolder) {

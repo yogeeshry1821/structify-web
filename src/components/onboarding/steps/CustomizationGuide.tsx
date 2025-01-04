@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Settings2, FolderTree } from 'lucide-react';
 import { Tooltip } from '../Tooltip';
 

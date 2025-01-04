@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { OnboardingStep } from './OnboardingStep';
 import { UploadGuide } from './steps/UploadGuide';
 import { CustomizationGuide } from './steps/CustomizationGuide';

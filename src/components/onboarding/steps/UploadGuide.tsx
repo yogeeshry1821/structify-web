@@ -1,4 +1,3 @@
-import React from 'react';
 import { Upload, FileUp } from 'lucide-react';
 import { Tooltip } from '../Tooltip';
 
